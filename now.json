@@ -1,6 +1,12 @@
 {
+    "version": 2,
+    "name": "poetastro using next.js",
     "builds": [
-      { "src": "*.html", "use": "@now/static" },
-      { "src": "date.js", "use": "@now/node" }
-    ]
+      {
+        "src": "web/package.json",
+        "use": "@now/static-build",
+        "config": { "distDir": "web" }
+      }
+    ],
+    "alias": ["poetastro.now.sh"]
   }
